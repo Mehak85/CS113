@@ -1,6 +1,4 @@
-// Mehak A maqsood
-// CS113-018
-// HW 01 part 3 
+
 import java.util.Scanner;
   public class Weight{
     public static void main( String [] args){
