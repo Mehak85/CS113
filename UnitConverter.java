@@ -1,6 +1,4 @@
-// Mehak A maqsood
-// CS113-018
-// HW 01 part 1 
+
    import java.util.*;
       public class UnitConverter{
          public static void main (String [] args){
