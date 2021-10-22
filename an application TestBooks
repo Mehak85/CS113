@@ -1,0 +1,50 @@
+
+import java.util.*;
+public class BookTest{ //an application TestBooks that asks the user repeatedly for books read during summer
+   
+   public static void main(String [] args) {
+      
+      Scanner scan=new Scanner(System.in);
+      int totalBooks;
+      System.out.println(" Enter the number of books you read this summer ");
+      totalBooks=scan.nextInt();
+      scan.nextLine();
+      
+      int counter=1;
+      int average=0;
+      int pages;
+      String title;
+      int totalPages=0;
+      Book smallestBook= null;
+      
+      
+      while (counter<=totalBooks)// iteration for the number of books
+      {
+         
+         System.out.println("Enter the title of the book ");
+         title=scan.nextLine();
+         
+         System.out.println("Enter the number of pages: ");
+         pages=scan.nextInt();
+         scan.nextLine();
+         totalPages+=pages;
+         
+         Book book1=new Book(pages, title);
+         
+         if(smallestBook==null)// campreto method to check the smallest book
+            smallestBook= book1;
+         else if(smallestBook.compareTo(book1)==1)
+            smallestBook= book1;
+            
+         totalPages+=pages;
+         counter++;// counter
+         
+       }
+         
+       average= (totalPages/totalBooks);// average
+       System.out.println(smallestBook+"\n and the average number of pages are " +average);
+       }  
+ }
+ 
+         
+         
