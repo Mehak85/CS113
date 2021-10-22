@@ -1,0 +1,56 @@
+
+// HW 05
+public class Book { //a class named Book 
+   // instance variables
+   private int pages;
+   private String title;
+   
+   public Book(int userPage, String userTitle)// constructor
+   {
+      this.pages= userPage;
+      this.title=userTitle;
+      }
+      
+   public int getPage()
+   {
+      return this.pages;
+   }
+   
+   public String getTitle()
+   {
+      return this.title;
+   }
+   
+   public void setPage(int U_page)
+   {
+      this.pages= U_page;
+      }
+   
+   public void setTitle(String U_title)
+   {
+      this.title=U_title;
+      }
+    
+    public String toString()
+    {
+      String info=("The smallest book you read this summer was "+ this.title+" and the number of pages was "+this.pages+" ");
+      return info;
+     }
+     
+    public boolean equals(Book other)
+     {
+       return (this.title==other.title) && (this.pages==other.pages);
+     }
+    
+    public int compareTo(Book other)
+    {
+      if (this.pages< other.pages)
+         return -1;
+      
+      else if ( this.pages> other.pages)
+         return 1;
+         
+      else
+         return 0;
+    }
+ }
