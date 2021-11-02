@@ -1,0 +1,15 @@
+import java.util.*;
+public class ArbitraryNum{
+
+    public int SmallEven( int [] numArray, int target)
+    {
+        int count=0;
+        for(int value: numArray)
+        {
+            if (value%2==0 && value <target)
+                count +=1;
+
+        }
+        return count;
+    }
+}
