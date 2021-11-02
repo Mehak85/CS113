@@ -1,0 +1,27 @@
+import java.util.*;
+public class TestDice
+{
+    public static void main(String[] args)
+    {
+        int ran;
+        int count=0;
+        Random random= new Random();
+        Die[] dies= new Die[50];
+
+        for(Die die: dies)
+        {
+            ran=random.nextInt(6)+1;
+            die= new Die(ran);
+            if(die.faceValue%2==0)
+                count+=1;
+            System.out.println("the number of Die objects in the array with an even face value :"+count);
+
+
+
+        }
+
+
+
+
+    }
+}  
