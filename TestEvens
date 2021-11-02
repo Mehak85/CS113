@@ -1,0 +1,24 @@
+import java.util.*;
+public class TestEvens{
+
+   public static void main(String[] args){
+
+       int [] array= {2, 7, 8, 3, 4, 10};
+       Num_two obj=new Num_two();
+
+       Scanner scan= new scanner(System.in);
+       System.out.println("Please enter a target value: ")
+       int value=scan.nextInt();
+
+       int fun=obj.SmallEven(array, value);
+       System.out.println(obj);
+
+      int [][] a= new int [3][2];
+      int [][] a= {{2,3,2},{2,5,6}};
+      for (int i=0; i<a.length;i++)
+         {
+         for(int j=0; j<a[i].length;j++)
+               System.out.println(a[i][j]);
+               }
+   }
+}
