@@ -1,0 +1,48 @@
+ public static int diagonalDifference(List<List<Integer>> arr)
+    {
+    // Write your code here
+    int sum1=0;
+    int sum2=0;
+    //int col1=0;
+    int col2=0;
+    for(int row=0; row<arr.size(); row++)
+    {//Diagonal 1
+        
+       sum1+=arr.get(row).get(row);
+        System.out.println(sum1);
+        /*for(int c=col1;c<arr.size();c++)
+        {
+            sum1+=arr.get(row).get(c);
+            System.out.println("s1"+sum1);
+            col1++;
+            break;
+        }*/
+    }
+    
+    for(int row2 =arr.size()-1; row2>=0; row2--)//Diagonal 2
+    {
+        for(int c=col2;c<arr.size(); c++)
+        {
+            sum2+=arr.get(row2).get(c);
+            System.out.println("s2"+sum2);
+            col2++;
+            break;
+        }
+    }
+        
+    System.out.println(sum1);
+    /*for( int j=arr.size()-1; j>=0;j--){
+        row=Math.abs(arr.get(j).get(j));
+        System.out.println(" row num2 "+row);
+        sum2=sum2+row;
+        System.out.println(" sum2 "+sum2);
+    }*/
+    //System.out.println(sum1);
+    System.out.println(sum2);
+    int ret= Math.abs(sum1-sum2);
+    System.out.println(ret);
+    return ret;
+    }
+
+}
+
