@@ -1,0 +1,21 @@
+    public static void plusMinus(List<Integer> arr) {
+    // Write your code here
+    float total= arr.size();
+    float positive=0, negative=0, zero=0;
+    for( int i=0; i<total;i++){
+        if(arr.get(i)>0){
+            positive++;
+
+        }
+        else if(arr.get(i)==0){
+            zero++;
+        }
+        else{
+            negative++;
+        }
+    }
+        System.out.println(positive/total);
+        System.out.println(negative/total);
+        System.out.println(zero/total);
+    
+    }
