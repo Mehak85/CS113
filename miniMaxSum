@@ -1,0 +1,47 @@
+/*
+     * Complete the 'miniMaxSum' function below.
+     *
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+    public static void miniMaxSum(List<Integer> arr) {
+    // Write your code here
+        long [] sums= new long[]{0,0,0,0,0};
+        int skip=0;
+        int sum=0;
+        for(int i=0; i<arr.size(); i++){
+            long total=0;
+            for(int j=0; j<arr.size(); j++){
+                if(j!=skip) 
+                {
+                    total+=arr.get(j);
+                    //System.out.println(total);
+                }
+
+                
+            }
+            sums[sum]=total;
+            skip++;
+            if(sum<5){sum++;}
+        }
+        //finding max and min
+        long min=sums[0];
+        long max=sums[0];
+        for(int i=1; i<sums.length;i++){
+            if(sums[i]<min){
+                min=sums[i];
+            }
+        }
+        System.out.print(min);
+        System.out.print(" ");
+        for(int i=1; i<sums.length;i++){
+           if(sums[i]>max)
+            {
+                max=sums[i];//14
+            } 
+        }
+        System.out.print(max);
+        
+
+
+    }
