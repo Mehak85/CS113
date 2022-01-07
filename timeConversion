@@ -1,0 +1,61 @@
+public static String timeConversion(String s) {
+        String time= "";
+        String snippet="";
+        for(int j=0; j<2;j++){
+            snippet+=s.charAt(j);
+        }
+        int t=Integer.parseInt(snippet);
+        
+        if(s.charAt(8)=='A'){//AM
+            if(t==12){
+                for(int j=0; j<2;j++){  time+='0';}
+                for(int i=2; i<=7;i++){ time+=s.charAt(i);}
+            }
+            else{
+                for(int i=0; i<=7;i++){ time+=s.charAt(i);}
+            } 
+        }
+        else{//PM
+          if(t==12){
+            for(int i=0; i<=7;i++){ time+=s.charAt(i);}
+          }
+          else{
+            t=t+12;
+            snippet=Integer.toString(t);
+            time+=snippet;
+            for(int i=2; i<=7;i++){ time+=s.charAt(i);}
+          } 
+        }
+        return time;
+    // OLD CODE WITH AM ERROR
+    /*String time= "";
+    boolean checker= false;
+    int t;
+    String snippet="";
+    for(int j=0; j<2;j++){
+         snippet+=s.charAt(j);
+    }
+    for(int i=0; i<s.length();i++){
+        if(s.charAt(i)=='P'){//checks for pm
+            checker= true;
+            break;   
+        }
+        if(s.charAt(i)=='A'){
+            break;
+        }
+        time+=s.charAt(i);
+
+    }
+    if(checker){
+      t=Integer.parseInt(snippet);
+      t=t+12;
+      snippet=Integer.toString(t);
+      /*time=time.replace(time.charAt(0),snippet.charAt(0));
+      //System.out.println(time.chatAt());
+      time=time.replace(time.charAt(1),snippet.charAt(1));
+      time=snippet+time.substring(2);
+    }
+    
+    return time;*/
+    
+    }
